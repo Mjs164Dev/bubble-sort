@@ -19,10 +19,3 @@ def bubble_sort(unsorted_array)
 end
 
 bubble_sort(unsorted_array)
-
-
-
-# first_num = unsorted_array.delete_at(index)
-# second_num = unsorted_array.delete_at(index + 1)
-# unsorted_array.insert(index + 1,first_num)
-# unsorted_array.insert(index, second_num)
