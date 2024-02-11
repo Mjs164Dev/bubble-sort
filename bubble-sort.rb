@@ -1,18 +1,20 @@
-unsorted_array = [4,3,78,2,0,2,17,4,24,2]
+unsorted_array = [4,3,78,2,0,2]
 
 def bubble_sort(unsorted_array)
-  for i in 0..unsorted_array.length - 2
-    first_num = unsorted_array[i]
-    second_num = unsorted_array[i + 1]
+  while unsorted_array != unsorted_array.sort 
+    for i in 0..unsorted_array.length - 2
+      first_num = unsorted_array[i]
+      second_num = unsorted_array[i + 1]
 
-    puts "Comparison: (#{first_num} : #{second_num})"
+      #puts "Comparison: (#{first_num} : #{second_num})"
 
-    #if first_num > second_num
-      #first_num = unsorted_array.delete_at(i)
-      #unsorted_array.insert(first_num, i + 1)
-      #puts "Numbers swapped!"
-      #puts "Updated array: #{unsorted_array}"
-    #end
+      if first_num > second_num
+        move_num = unsorted_array.delete_at(i)
+        unsorted_array.insert(i + 1, move_num)
+        #puts "Numbers swapped!"
+        puts unsorted_array.inspect
+      end
+    end
   end
 end
 
